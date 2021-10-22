@@ -1,0 +1,22 @@
+{
+  "development": {
+    "username": "root",
+    "password": "liuchenxi0428",
+    "database": "egg_collection",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "liuchenxi0428",
+    "database": "egg_collection",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "liuchenxi0428",
+    "database": "egg_collection",
+    "host": "127.0.0.1"
+  }
+}

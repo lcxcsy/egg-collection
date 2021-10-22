@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-20 09:17:44
- * @LastEditTime: 2021-10-20 14:07:05
+ * @LastEditTime: 2021-10-21 09:42:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \egg-collection\app\io\middleware\connection.js
@@ -17,11 +17,10 @@ module.exports = app => {
 
     logger.debug('#user_info', socketId, userName, userId)
 
-    const io = app.io
-    io.on('connection', (socket) => {
+    app.io.on('connection', (socket) => {
       // 心跳测试
       setInterval(() => {
-        socket.emit('heartBeat', helper.parseMsg('heartBeat', { msg: `Server's heartBeat` }))
+        socket.emit('heartBeat', helper.parseSocketMsg('heartBeat', { msg: `Server's heartBeat` }))
       }, 1000 * 4)
     })
 

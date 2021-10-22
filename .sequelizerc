@@ -1,0 +1,18 @@
+/*
+ * @Author: your name
+ * @Date: 2021-10-20 16:50:18
+ * @LastEditTime: 2021-10-20 16:50:33
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \egg-collection\.sequelizerc
+ */
+'use strict';
+
+const path = require('path');
+
+module.exports = {
+  config: path.join(__dirname, 'database/config.json'),
+  'migrations-path': path.join(__dirname, 'database/migrations'),
+  'seeders-path': path.join(__dirname, 'database/seeders'),
+  'models-path': path.join(__dirname, 'app/model'),
+};
